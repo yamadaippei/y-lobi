@@ -1,6 +1,9 @@
-.sign-up
+.regiistration
   =link_to new_user_registration_path do
     新規登録
 .edit-user
   =link_to edit_user_registration_path do
-    情報編集機能
+    ユーザー情報
+.sign-out
+  =link_to destroy_user_session_path, method: :delete do
+    ログアウト
