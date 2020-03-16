@@ -1,9 +1,16 @@
-.regiistration
-  =link_to new_user_registration_path do
-    新規登録
-.edit-user
-  =link_to edit_user_registration_path do
-    ユーザー情報
-.sign-out
-  =link_to destroy_user_session_path, method: :delete do
-    ログアウト
+.top-main-visual
+  .top-header
+    .top-app-logo
+      = image_tag 'beautiful-background-image4.jpeg', alt: '', height: '80', width: '80', class: 'app-logo'
+    .logo-text caht info comunity
+    .search-box
+      %form{:action => "/", :method => "post", class:"search-area"}
+        %input{type:"text", placeholder: "グループ・ユーザー名を入力してください", class:"input-area"}
+    .login-button
+      %p.user-login-button 
+        = link_to new_user_session_path , class:"registration-text" do
+          新規登録・ログイン
+  .app-publicity
+    %p.app-publicity__text みんな集まれ！ 完全攻略！
+    %p.app-publicity__text__subtitle ゲームは楽しんだもんがち！！
+  
