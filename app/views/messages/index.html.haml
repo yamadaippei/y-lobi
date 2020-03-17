@@ -1,0 +1,46 @@
+-# 固定する
+.group-header
+  .group-top-header
+    .group-top-header__icon
+      =link_to "#" do
+        =image_tag asset_path('')
+    .group-top-header__homeicon
+      =link_to "#" do
+        =image_tag asset_path('')
+    .group-top-header__form
+      .group-search-form
+        %form{:action => "/", :method => "post", class:"search-area"}
+          %input{type:"text", placeholder: "調べたいグループを入力してください", class:"input-area"}
+    .group-top-header__myicon
+      =link_to "#" do
+        =image_tag asset_path('')
+  .group-information-backgroud
+    -# バックグラウンドのイメージを入れる
+    .group-information-form
+      .group-information-form__icon
+        =link_to "#" do
+          =image_tag asset_path('')
+      .group-information-form__text
+        .group-information-form__text__header
+          %p.group-gametitle [公認] ゲーム名
+        .group-information-form__text__member
+          %p.group-member メンバー数
+  .group-nav
+    .group-nav__chat
+      %p チャット
+    .group-nav__summary
+      %p まとめ
+    .group-nav__information
+      %p グループ情報
+
+
+.group-main 
+  .group-main__messages
+    -# .group-main__messages__content
+    
+
+
+    -# 右下に固定する
+  .group-main__chatlink
+    =link_to "#" do
+      %p チャットをする

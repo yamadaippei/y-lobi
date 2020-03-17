@@ -1,7 +1,8 @@
 .top-main-visual
   .top-header
     .top-app-logo
-      = image_tag 'beautiful-background-image4.jpeg', alt: '', height: '80', width: '80', class: 'app-logo'
+      =link_to "#" do
+        = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
     .logo-text caht info comunity
     .search-box
       %form{:action => "/", :method => "post", class:"search-area"}
