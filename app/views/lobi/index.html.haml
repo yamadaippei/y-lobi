@@ -5,8 +5,8 @@
         = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
     .logo-text caht info comunity
     .search-box
-      %form{:action => "/", :method => "post", class:"search-area"}
-        %input{type:"text", placeholder: "グループ・ユーザー名を入力してください", class:"input-area"}
+      = link_to messages_url ,class: "root-group-index" do
+        %p.root-group-index グループ一覧を開く
     .login-button
       %p.user-login-button 
         = link_to new_user_session_path , class:"registration-text" do

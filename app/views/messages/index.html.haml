@@ -2,8 +2,8 @@
 .group-header
   .group-top-header
     .group-top-header__icon
-      =link_to "#" do
-        =image_tag asset_path('')
+      = link_to root_path do
+        %i.fas.fa-gamepad
     .group-top-header__homeicon
       =link_to "#" do
         =image_tag asset_path('')
@@ -23,22 +23,24 @@
       .group-information-form__text
         .group-information-form__text__header
           %p.group-gametitle [公認] ゲーム名
-        .group-information-form__text__member
-          %p.group-member メンバー数
   .group-nav
     .group-nav__chat
-      %p チャット
+      %p 新作ゲーム
     .group-nav__summary
-      %p まとめ
+      %p 人気のゲーム
     .group-nav__information
-      %p グループ情報
+      %p 完全無料アプリ
 
 
 .group-main 
   .group-main__messages
-    -# .group-main__messages__content
-    
-
+    .group-list
+    .group-list
+    .group-list
+  .group-main__messages
+    .group-list
+    .group-list
+    .group-list
 
     -# 右下に固定する
   .group-main__chatlink
