@@ -22,7 +22,9 @@
           =image_tag asset_path('')
       .group-information-form__text
         .group-information-form__text__header
-          %p.group-gametitle [公認] ゲーム名
+          =link_to new_group_path , class: "create-group-path" do
+            %p.group-gametitle グループ作成
+
   .group-nav
     .group-nav__chat
       %p 新作ゲーム

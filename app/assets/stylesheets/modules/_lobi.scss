@@ -51,7 +51,17 @@
       height: 100%;
       .user-login-button{
         text-align: center;
-        line-height: 80px;
+        line-height: 60px;
+        height: 30px;
+        .registration-text{
+          color: white;
+          text-decoration: none;
+          font-family: 'Times New Roman', Times, serif;
+        }
+      }
+      .user-logout-button {
+        text-align: center;
+        line-height: 60px;
         .registration-text{
           color: white;
           text-decoration: none;
