@@ -75,11 +75,15 @@
           width: 60%;
           margin: 0 auto;
           margin-top: 5px;
-          .group-gametitle {
-            height: 80%;
-            text-align: center;
-            font-size: 25px;
-            margin-top: 3px;
+          .create-group-path{
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            .group-gametitle {
+              text-align: center;
+              font-size: 25px;
+              margin-top: 3px;
+            }
           }
         }
       }
