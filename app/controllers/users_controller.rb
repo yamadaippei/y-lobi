@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def index
+    @user = User.ApplicationController
+    user_id = current_user.id
   def edit
   end
 
