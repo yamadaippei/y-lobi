@@ -6,15 +6,17 @@
   height: 30vh;
   width: 100vw;
   position: fixed;
+  background-color: white;
   .group-top-header{
-    height: 20%;
+    height: 50px;
     width: 100%;
     display: flex;
-    &__icon{
-      display: inline-block;
-      width: 5%;
-      i.fas.fa-gamepad{
-        font-size: 30px;
+    .top-app-logo{
+      width: 6%;
+      .app-logo{
+        border-radius: 30%;
+        height: 50px;
+        width: 50px;
       }
     }
     &__homeicon{
@@ -43,7 +45,7 @@
   .group-information-backgroud{
     // 仮でイメージ挿入
     background-image: url(beautiful-background-image8.jpg);
-    height: 40%;
+    height: 70px;
     width: 100%;
     position: relative;
     .group-information-form{
@@ -90,7 +92,7 @@
     }
   }
   .group-nav{
-    height: 25%;
+    height: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -125,43 +127,43 @@
   }
 }
 
-.group-main{
-  width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  padding-top: 35vh;
-  &__messages{
-    height: 100%;
-    width: 100%;
-    padding: 20px 20px 20px;
-    justify-content: space-around;
-    display: flex;
-    .group-list{
-      width: 30%;
-      height: 250px;
-      background-image: url(cool-image1.jpg);
-    }
-  }
-  &__chatlink{
-    float: right;
-    position: fixed;
-    margin-bottom: 10px;
-  }
-}
+// .group-main{
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: scroll;
+  
+//   .group-list{
+//     width: 30%;
+//     height: 250px;
+//     background-image: url(cool-image1.jpg);
+//   }
+// }
 
 .group-main {
   height: calc( 100% - 30vh);
   overflow: scroll;
   width: 100vw;
   display: flex;
-  margin: 26px auto 0 auto;
+  padding-top: 35vh;
   .group-list{
     width: 90vw;
     display: inline-block;
     margin: auto;
+    overflow: scroll;
     .group{
       display: inline-block;
-      margin: 12px;
+      margin: 10px;
+      width: 30%;
+      height: 170px;
+      .group-link-path{
+        text-decoration: none;
+        .name{
+          color: black;
+        }
+        .group__message{
+          color: black;
+        }
+      }
     }
   }
 }
