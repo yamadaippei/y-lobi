@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: y-lobi_production
-  username: y-lobi
-  password: <%= ENV['Y-LOBI_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock #必須の指定
