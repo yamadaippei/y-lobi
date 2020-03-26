@@ -4,9 +4,9 @@
     .top-app-logo
       =link_to root_path do
         = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
-    .group-top-header__homeicon
-      =link_to "#" do
-        =image_tag asset_path('')
+    -# .group-top-header__homeicon
+    -#   =link_to "#" do
+    -#     =image_tag asset_path('')
     .group-top-header__form
       .group-search-form
         %form{:action => "/", :method => "post", class:"search-area"}
@@ -40,7 +40,7 @@
       -# %figure.group--img
       -#   = image_tag group.image.image.url
       .group
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class:"group-link-path"do
           %h3.name 
             = group.name
           .group__message
