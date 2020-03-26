@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+.group-header{
+  height: 30vh;
+  width: 100vw;
+  position: fixed;
+  .group-top-header{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    &__icon{
+      display: inline-block;
+      width: 5%;
+      i.fas.fa-gamepad{
+        font-size: 30px;
+      }
+    }
+    &__homeicon{
+      width: 5%;
+    }
+    &__form{
+      width: 85%;
+      .group-search-form{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        form{
+          width: 100%;
+          height: 100%;
+          input{
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__myicon{
+      width: 5%;
+    }
+  }
+  .group-information-backgroud{
+    // 仮でイメージ挿入
+    background-image: url(beautiful-background-image8.jpg);
+    height: 40%;
+    width: 100%;
+    position: relative;
+    .group-information-form{
+      position: absolute;
+      height: 85%;
+      width: 90%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      margin-top: auto;
+      background-color: yellow;
+      display: flex;
+      border-style: solid;
+      &__icon{
+        height: 100%;
+        width: 10%;
+        display: inline-block;
+      }
+      &__text{
+        width: calc(100% - 20%);
+        height: 100%;
+        display: inline-flex;
+        vertical-align: middle;
+        &__header{
+          display: inline-block;
+          height: 80%;
+          width: 60%;
+          margin: 0 auto;
+          margin-top: 5px;
+          .create-group-path{
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            .group-gametitle {
+              text-align: center;
+              font-size: 25px;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .group-nav{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .group-nav__chat{
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      padding-top: 7px;
+      font-size: large;
+      color: orange;
+      border-style: outset;
+      cursor: alias;
+    }
+    .group-nav__summary{
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      padding-top: 7px;
+      font-size: large;
+      color: blue;
+      border-style: outset;
+    }
+    .group-nav__information{
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      padding-top: 7px;
+      font-size: large;
+      color: purple;
+      border-style: outset;
+    }
+  }
+}
+
+.group-main{
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  padding-top: 35vh;
+  &__messages{
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px 20px;
+    justify-content: space-around;
+    display: flex;
+    .group-list{
+      width: 30%;
+      height: 250px;
+      background-image: url(cool-image1.jpg);
+    }
+  }
+  &__chatlink{
+    float: right;
+    position: fixed;
+    margin-bottom: 10px;
+  }
+}
+
+.group-main {
+  height: calc( 100% - 30vh);
+  overflow: scroll;
+  width: 100vw;
+  display: flex;
+  margin: 26px auto 0 auto;
+  .group-list{
+    width: 90vw;
+    display: inline-block;
+    margin: auto;
+    .group{
+      display: inline-block;
+      margin: 12px;
+    }
+  }
+}
