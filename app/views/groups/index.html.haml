@@ -1,12 +1,9 @@
--# 固定する
+
 .group-header
   .group-top-header
     .top-app-logo
       =link_to root_path do
         = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
-    -# .group-top-header__homeicon
-    -#   =link_to "#" do
-    -#     =image_tag asset_path('')
     .group-top-header__form
       .group-search-form
         %form{:action => "/", :method => "post", class:"search-area"}

@@ -1,19 +1,44 @@
-.contents 
-  .contents-top
-    .current-group 
-      = @group.name
+.group-header
+  .group-top-header
+    .top-app-logo
+      =link_to root_path do
+        = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
+    .group-top-header__form
+      .group-search-form
+        %form{:action => "/", :method => "post", class:"search-area"}
+          %input{type:"text", placeholder: "調べたいグループを入力してください", class:"input-area"}
+    .group-top-header__myicon
+      =link_to "#" do
+        =image_tag asset_path('')
+  .group-information-backgroud
+    -# バックグラウンドのイメージを入れる
+    .group-information-form
+      .group-information-form__icon
+        =link_to "#" do
+          =image_tag asset_path('')
+      .group-name-content
+        .group-name
+          = @group.name
+
+  .group-nav
+    .group-nav__chat
+      %p チャットする
+    .group-nav__summary
+      %p まとめ
+    .group-nav__information
+      %p グループの情報
 
 
-  .messages
-    = render @messages
+.messages-bosy
+  = render @messages
 
 
 
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
