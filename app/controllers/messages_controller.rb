@@ -17,6 +17,22 @@ class MessagesController < ApplicationController
     end
   end
 
+  def edit
+    @message = Message.find(params[:id])
+  end
+
+  def update
+    message = current_user.messages.find(params[:id])
+    message.update(message_params)
+    redirect_to group_messages_path(@group), notice:"メッセージを編集しました"
+  end
+
+  def destroy
+    @message = current_user.messages.find(params[:id])
+    @message.destroy(message_params)
+    redirect_to group_messages_path(@group), notice:"投稿を削除しました。"
+  end
+
   private
 
   def message_params
