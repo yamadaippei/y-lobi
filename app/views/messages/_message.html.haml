@@ -20,4 +20,4 @@
         = f.file_field :image, class: 'hidden'
     = f.submit 'Send', class: 'form__submit'
 
-    = link_to "削除", message_path(@message.id), method: :delete
+    = link_to "削除", group_message_path(message.group.id, message.id), method: :delete

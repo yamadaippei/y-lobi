@@ -31,9 +31,9 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    @message = current_user.messages.find(params[:id])
-    @message.destroy
-    redirect_to group_messages_path(@group), notice:"投稿を削除しました。"
+    message = current_user.messages.find(params[:id])
+    message.destroy
+    redirect_to group_messages_path(@group), alert: "投稿を削除しました。"
   end
 
   private
