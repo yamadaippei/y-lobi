@@ -23,13 +23,16 @@ class MessagesController < ApplicationController
 
   def update
     message = current_user.messages.find(params[:id])
-    message.update(message_params)
-    redirect_to group_messages_path(@group), notice:"メッセージを編集しました"
+    if message.update(message_params)
+      redirect_to group_messages_path(@group), notice:"メッセージを編集しました"
+    else
+      render :index
+    end
   end
 
   def destroy
     @message = current_user.messages.find(params[:id])
-    @message.destroy(message_params)
+    @message.destroy
     redirect_to group_messages_path(@group), notice:"投稿を削除しました。"
   end
 
