@@ -8,6 +8,72 @@
 
 
 
-.messages-bosy{
-  padding-top: 35vh;
+.messages-body{
+  padding: 35vh 30px 30px 30px;
+  height: 80vh;
+  text-align: center;
+  .warning-message{
+    color: red;
+    font-size: 20px;
+  }
+  .message{
+    background-color: white;
+    border-radius: 5%;
+    margin-top: 10px;
+    border-style: ridge;
+    .introduce-user-name{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .upper-message__date{
+      font-size: 15px;
+    }
+    .edit_message{
+      display: flex;
+      justify-content: space-around;
+      .message-delete-Btn{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+
+.form-message-field{
+  position: fixed;
+  height: 200px;
+  border: solid;
+  border-radius: 15px;
+  margin-left: 60%;
+  margin-bottom: 2%;
+  width: 40%;
+  right: 0;
+  bottom: 0;
+  background: white;
+  .new_message{
+    height: 100%;
+    .form__message{
+      height: 85%;
+      width: 100%;
+      text-align: start;
+      .hidden{
+        display: none;
+      }
+    }
+    .form__mask__image{
+      justify-content: space-around;
+      display: flex;
+    }
+  }
+}
+
+
+
+
+.hidden{
+  display: none;
+}
+
+.icon{
+  cursor: pointer;
 }

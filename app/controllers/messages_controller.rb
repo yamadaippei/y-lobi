@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+      redirect_to group_messages_path(@group)
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください'
@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
   def update
     message = current_user.messages.find(params[:id])
     if message.update(message_params)
-      redirect_to group_messages_path(@group), notice:"メッセージを編集しました"
+      redirect_to group_messages_path(@group)
     else
       render :index
     end
@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
   def destroy
     message = current_user.messages.find(params[:id])
     message.destroy
-    redirect_to group_messages_path(@group), alert: "投稿を削除しました。"
+    redirect_to group_messages_path(@group)
   end
 
   private
