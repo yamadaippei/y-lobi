@@ -48,6 +48,7 @@
     height: 70px;
     width: 100%;
     position: relative;
+    background-color: white;
     .group-information-form{
       position: absolute;
       height: 85%;
@@ -96,6 +97,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: white;
     .group-nav__chat{
       display: inline-block;
       width: 30%;
@@ -146,6 +148,8 @@
       height: 170px;
       border-style: groove;
       background-color: white;
+      padding: 10px;
+      text-align: center;
       .group-link-path{
         text-decoration: none;
         .name{

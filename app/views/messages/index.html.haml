@@ -19,6 +19,7 @@
       .group-name-content
         .group-name
           = @group.name
+          のグループ
 
   .group-nav
     .group-nav__chat
@@ -29,18 +30,20 @@
       %p グループの情報
 
 
+.warning-message 投稿した本人のみ編集、消去できます
 
 .messages-body
-  %a.warning-message 投稿した本人のみ編集、消去できます
   = render @messages
 
 
 
 .form-message-field
+
   = form_for [@group, @message] do |f|
-    = f.text_field :content, class: 'form__message', placeholder: 'メッセージを入力してください'
-    
+    = f.text_area :content, class: 'form__message', 
+      placeholder: "良識のあるコメントを心掛けましょう"
     = f.label :image, class: 'form__mask__image' do
-      = icon('fas', 'image', class: 'icon')
+      -# = icon('fas', 'image', class: 'icon')
+      .image-choose-icon 写真を選ぶ
       = f.file_field :image, class: 'hidden'
       = f.submit '送信', class: 'form__submit'
