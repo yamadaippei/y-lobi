@@ -1,47 +1,65 @@
 .group-name-content{
   width: 100%;
+  text-align: center;
   .group-name{
     padding: 5px;
     margin-top: 10px;
+    font-size: 18px;
   }
 }
 
-
+.warning-message{
+  color: red;
+  font-size: 14px;
+  top: 230px;
+  margin-left: 60%;
+  position: fixed;
+}
 
 .messages-body{
-  padding: 35vh 30px 30px 30px;
-  height: 80vh;
+  padding: 30vh 30px 30px 30px;
+  // height: 80vh;
   text-align: center;
-  .warning-message{
-    color: red;
-    font-size: 20px;
-  }
-  .message{
+}
+
+.message{
+  background-color: white;
+  border-radius: 5%;
+  margin-top: 10px;
+  border-style: ridge;
+  width: 60%;
+  .message-content{
     background-color: white;
-    border-radius: 5%;
-    margin-top: 10px;
-    border-style: ridge;
-    .introduce-user-name{
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
+      .introduce-user-name{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
     .upper-message__date{
       font-size: 15px;
     }
-    .edit_message{
+    .edit-delete-content{
       display: flex;
       justify-content: space-around;
+      .edit-message-info{
+        text-decoration: none;
+        color: black;
+      }
       .message-delete-Btn{
         text-decoration: none;
         color: black;
       }
     }
+    .lower-message__image{
+      width: 50%;
+      height: 50%;
+    }
   }
 }
 
 
+
 .form-message-field{
   position: fixed;
-  height: 200px;
+  height: 60%;
   border: solid;
   border-radius: 15px;
   margin-left: 60%;
@@ -55,25 +73,38 @@
     .form__message{
       height: 85%;
       width: 100%;
-      text-align: start;
-      .hidden{
-        display: none;
-      }
+      font-size: 20px;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
     .form__mask__image{
       justify-content: space-around;
       display: flex;
+      .hidden{
+        display: none;
+      }
+      .image-choose-icon{
+        cursor: pointer;
+      }
+      .image-choose-icon:hover{
+        box-shadow: 0 1px 1px 1px;
+        border-style: groove;
+      }
+      .form__submit{
+        cursor: pointer;
+        border-style: none;
+      }
+      .form__submit:hover{
+        box-shadow: 2px 3px 3px;
+        border-style: groove;
+      }
     }
   }
 }
 
-
-
-
-.hidden{
-  display: none;
-}
-
-.icon{
-  cursor: pointer;
+::placeholder {
+  font-size: 18px;
+  text-align: center;
+  line-height: 350px;
 }
