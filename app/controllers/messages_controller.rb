@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     message = current_user.messages.find(params[:id])
     message.destroy
     redirect_to group_messages_path(@group)
-end
+  end
 
   private
 
