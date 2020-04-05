@@ -34,8 +34,6 @@
 .group-main 
   .group-list
     - @groups.each do |group|
-      -# %figure.group--img
-      -#   = image_tag group.image.image.url
       .group
         = link_to group_messages_path(group), class:"group-link-path"do
           %h3.name 
