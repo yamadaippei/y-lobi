@@ -24,17 +24,18 @@
     }
     &__form{
       width: 85%;
-      .group-search-form{
-        height: 100%;
+      form{
         width: 100%;
-        margin: auto;
-        form{
+        height: 100%;
+        display: flex;
+        .search-field{
           width: 100%;
+          text-align: center;
+        }
+        .submitBtn{
+          width: 5%;
           height: 100%;
-          input{
-            height: 100%;
-            width: 100%;
-          }
+          background-color: rgb( 200, 200, 200);
         }
       }
     }

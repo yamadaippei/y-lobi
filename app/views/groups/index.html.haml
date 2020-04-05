@@ -1,35 +1,5 @@
-
-.group-header
-  .group-top-header
-    .top-app-logo
-      =link_to root_path do
-        = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
-    .group-top-header__form
-      .group-search-form
-        %form{:action => "/", :method => "post", class:"search-area"}
-          %input{type:"text", placeholder: "調べたいグループを入力してください", class:"input-area"}
-    .group-top-header__myicon
-      =link_to "#" do
-        =image_tag asset_path('')
-  .group-information-backgroud
-    -# バックグラウンドのイメージを入れる
-    .group-information-form
-      .group-information-form__icon
-        =link_to "#" do
-          =image_tag asset_path('')
-      .group-information-form__text
-        .group-information-form__text__header
-          =link_to new_group_path , class: "create-group-path" do
-            %p.group-gametitle グループ作成
-
-  .group-nav
-    .group-nav__chat
-      %p 新作ゲーム
-    .group-nav__summary
-      %p 人気のゲーム
-    .group-nav__information
-      %p 完全無料アプリ
-
+.header
+  = render "groups/index-header"
 
 .group-main 
   .group-list
@@ -39,4 +9,13 @@
           %h3.name 
             = group.name
           .group__message
-            =group.show_last_message
+            = group.show_last_message
+
+        -# = @search_groups
+    -# - @search_groups.each do |group|
+    -#   .group
+    -#     = link_to group_messages_path(group), class:"group-link-path"do
+    -#       %h3.name 
+    -#         = group.name
+    -#       .group__message
+    -#         = group.show_last_message
