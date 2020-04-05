@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
   end
 
   def updaete
-    @group = Group.find(params[[:id]])
+    @group = Group.find(params[:id])
     if @gorup.update(group_params)
       redirect_to root_path
     else
@@ -35,9 +35,9 @@ class GroupsController < ApplicationController
   def show
   end
 
-  
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])
   end
+
 end

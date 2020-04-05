@@ -1,0 +1,12 @@
+.header
+  = render "groups/index-header"
+
+.group-main 
+  .group-list
+    - @search_groups.each do |group|
+      .group
+        = link_to group_messages_path(group), class:"group-link-path"do
+          %h3.name 
+            = group.name
+          .group__message
+            =group.show_last_message

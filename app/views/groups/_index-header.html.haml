@@ -6,7 +6,10 @@
     .group-top-header__form
       = search_form_for @search, url: search_groups_path do |f|
         = f.text_field :name_cont, placeholder: "検索", class: "search-field"
-        = f.submit "検索", class: "submitBtn"
+        = f.submit "検索", class: "submitBtn" 
+      -# .group-search-form
+        -# %form{:action => "/", :method => "post", class:"search-area"}
+        -#   %input{type:"text", placeholder: "調べたいグループを入力してください", class:"input-area"}
     .group-top-header__myicon
       =link_to "#" do
         =image_tag asset_path('')
@@ -16,32 +19,15 @@
       .group-information-form__icon
         =link_to "#" do
           =image_tag asset_path('')
-      .group-name-content
-        .group-name
-          = @group.name
-          のグループ
+      .group-information-form__text
+        .group-information-form__text__header
+          =link_to new_group_path , class: "create-group-path" do
+            %p.group-gametitle グループ作成
 
   .group-nav
     .group-nav__chat
-      %p チャットする
+      %p 新作ゲーム
     .group-nav__summary
-      %p まとめ
+      %p 人気のゲーム
     .group-nav__information
-      %p グループの情報
-
-
-.messages-body
-  = render @messages
-
-
-
-.form-message-field
-
-  = form_for [@group, @message] do |f|
-    = f.text_area :content, class: 'form__message', 
-      placeholder: "良識のあるコメントを心掛けましょう"
-    = f.label :image, class: 'form__mask__image' do
-      -# = icon('fas', 'image', class: 'icon')
-      .image-choose-icon 写真を選ぶ
-      = f.file_field :image, class: 'hidden'
-      = f.submit '送信', class: 'form__submit'
+      %p 完全無料アプリ
