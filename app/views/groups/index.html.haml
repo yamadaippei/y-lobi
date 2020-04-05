@@ -11,11 +11,7 @@
           .group__message
             = group.show_last_message
 
-        -# = @search_groups
-    -# - @search_groups.each do |group|
-    -#   .group
-    -#     = link_to group_messages_path(group), class:"group-link-path"do
-    -#       %h3.name 
-    -#         = group.name
-    -#       .group__message
-    -#         = group.show_last_message
+        - if user_signed_in?
+          .edit-delete-content
+            = link_to "編集", edit_group_path(group.id), class: "edit-group-info"
+            = link_to "グループの削除", group_path(group.id), method: :delete, class: "delete-group-Btn"

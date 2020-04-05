@@ -23,16 +23,19 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  def updaete
+  def update
     @group = Group.find(params[:id])
-    if @gorup.update(group_params)
-      redirect_to root_path
+    if @group.update(group_params)
+      redirect_to groups_path
     else
       render :edit
     end
   end
 
-  def show
+  def destroy
+    group = Group.find(params[:id])
+    group.destroy
+    redirect_to groups_path
   end
 
   private

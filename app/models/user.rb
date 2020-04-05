@@ -6,6 +6,6 @@ class User < ApplicationRecord
   # validates :name, presence: true, uniqueness: true
   
   has_many :group_users
-  has_many :groups, through: :gruop_users
-  has_many :messages
+  has_many :groups, through: :gruop_users, dependent: :destroy
+  has_many :messages, dependent: :destroy
 end
