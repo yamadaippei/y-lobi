@@ -1,37 +1,12 @@
-.group-header
-  .group-top-header
-    .top-app-logo
-      =link_to root_path do
-        = image_tag 'beautiful-background-image4.jpeg', alt: 'app-logo', height: '80', width: '80', class: 'app-logo'
-    .group-top-header__form
-      = search_form_for @search, url: search_groups_path do |f|
-        = f.text_field :name_cont, placeholder: "検索", class: "search-field"
-        = f.submit "検索", class: "submitBtn"
-    .group-top-header__myicon
-      =link_to "#" do
-        =image_tag asset_path('')
-  .group-information-backgroud
-    -# バックグラウンドのイメージを入れる
-    .group-information-form
-      .group-information-form__icon
-        =link_to "#" do
-          =image_tag asset_path('')
-      .group-name-content
-        .group-name
-          = @group.name
-          のグループ
-
-  .group-nav
-    .group-nav__chat
-      %p チャットする
-    .group-nav__summary
-      %p まとめ
-    .group-nav__information
-      %p グループの情報
+.header
+  = render "messages/index-header"
 
 
 .messages-body
-  = render @messages
+  .messages-body__contents
+    .group-icon-info
+    = render @messages
+    
 
 
 

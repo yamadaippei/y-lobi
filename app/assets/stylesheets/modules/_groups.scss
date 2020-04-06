@@ -6,7 +6,7 @@
   // height: 30vh;
   width: 100vw;
   position: fixed;
-  background-color: white;
+  background-image: url(cool-image00.jpg);
   .group-top-header{
     height: 50px;
     width: 100%;
@@ -35,7 +35,8 @@
         .submitBtn{
           width: 5%;
           height: 100%;
-          background-color: rgb( 200, 200, 200);
+          background-color: white;
+          border-radius: 0 20px 0 20px;
         }
       }
     }
@@ -47,7 +48,7 @@
     height: 70px;
     width: 100%;
     position: relative;
-    background-color: white;
+    background-image: url(cool-image00.jpg);
     .group-information-form{
       position: absolute;
       height: 85%;
@@ -96,7 +97,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-image: url(cool-image00.jpg);
     .group-nav__chat{
       display: inline-block;
       width: 30%;
@@ -106,6 +107,7 @@
       color: orange;
       border-style: outset;
       cursor: alias;
+      background-color: white;
     }
     .group-nav__summary{
       display: inline-block;
@@ -115,6 +117,7 @@
       font-size: large;
       color: blue;
       border-style: outset;
+      background-color: white;
     }
     .group-nav__information{
       display: inline-block;
@@ -124,6 +127,7 @@
       font-size: large;
       color: purple;
       border-style: outset;
+      background-color: white;
     }
   }
 }
@@ -132,7 +136,7 @@
   width: 100vw;
   display: flex;
   padding-top: 30vh;
-  background-color: yellow;
+  background-image: url(cool-image00.jpg);
   height: 100vh;
   .group-list{
     width: 90vw;
@@ -156,6 +160,22 @@
         }
         .group__message{
           color: black;
+          height: 70%;
+          overflow: hidden;
+        }
+      }
+      .edit-delete-content{
+        display: flex;
+        justify-content: space-around;
+        .edit-group-info{
+          text-decoration: none;
+          color: blue;
+          display: block;
+        }
+        .delete-group-Btn{
+          text-decoration: none;
+          color: red;
+          display: block;
         }
       }
     }
