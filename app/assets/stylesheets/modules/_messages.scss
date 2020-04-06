@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?mw0ft6');
+  src:  url('fonts/icomoon.eot?mw0ft6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?mw0ft6') format('truetype'),
+    url('fonts/icomoon.woff?mw0ft6') format('woff'),
+    url('fonts/icomoon.svg?mw0ft6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 .group-name-content{
   width: 100%;
   text-align: center;
@@ -17,45 +46,69 @@
 }
 
 .messages-body{
-  padding: 28vh 30px 30px 30px;
-  // height: 80vh;
+  padding: 26vh 40vw 30px 30px;
   text-align: center;
-}
-
-.message{
-  background-color: white;
-  border-radius: 5%;
-  margin-top: 10px;
-  border-style: ridge;
-  width: 60%;
-  .message-content{
-    background-color: white;
-      .introduce-user-name{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      }
-    .upper-message__date{
-      font-size: 15px;
+  background-image: url(cool-image00.jpg);
+  &__contents{
+    width: 100%;
+    height: 73vh;
+    overflow: scroll;
+    .group-icon-info{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      background-color: black;
+      margin: 15px 0 0 30px;
     }
-    .edit-delete-content{
-      display: flex;
-      justify-content: space-around;
-      .edit-message-info{
-        text-decoration: none;
-        color: black;
+    .message{
+      background-color: white;
+      border-radius: 5%;
+      margin-top: 10px;
+      // border-style: ridge;
+      width: 80%;
+      float: right;
+      .message-content{
+        background-color: white;
+        position: relative;
+        border-radius: 30px;
+          .introduce-user-name{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          }
+        .upper-message__date{
+          font-size: 15px;
+        }
+        .edit-delete-content{
+          display: flex;
+          justify-content: space-around;
+          .edit-message-info{
+            text-decoration: none;
+            color: blue;
+          }
+          .message-delete-Btn{
+            text-decoration: none;
+            color: red;
+          }
+        }
+        .lower-message__image{
+          width: 100px;
+          height: 100px;
+        }
+        .icon-play3{
+          position: absolute;
+          top: 8px;
+          left: -12px;
+          font-family: 'icon-font';
+          font-style: normal;
+          color: white;
+        }
       }
-      .message-delete-Btn{
-        text-decoration: none;
-        color: black;
-      }
-    }
-    .lower-message__image{
-      width: 50%;
-      height: 50%;
     }
   }
 }
 
-
+.icon-play3:before{
+  content: '\ea1c';
+}
 
 .form-message-field{
   position: fixed;
