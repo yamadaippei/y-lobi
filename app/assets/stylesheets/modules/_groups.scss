@@ -6,7 +6,7 @@
   // height: 30vh;
   width: 100vw;
   position: fixed;
-  background-image: url(cool-image00.jpg);
+  background-image: image_url('cool-image00.jpeg');
   .group-top-header{
     height: 50px;
     width: 100%;
@@ -48,7 +48,7 @@
     height: 70px;
     width: 100%;
     position: relative;
-    background-image: url(cool-image00.jpg);
+    background-image: image_url('cool-image00.jpeg');
     .group-information-form{
       position: absolute;
       height: 85%;
@@ -97,7 +97,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-image: url(cool-image00.jpg);
+    background-image: image_url('cool-image00.jpeg');
     .group-nav__chat{
       display: inline-block;
       width: 30%;
@@ -136,7 +136,7 @@
   width: 100vw;
   display: flex;
   padding-top: 30vh;
-  background-image: url(cool-image00.jpg);
+  background-image: image_url('cool-image00.jpeg');
   height: 100vh;
   .group-list{
     width: 90vw;
