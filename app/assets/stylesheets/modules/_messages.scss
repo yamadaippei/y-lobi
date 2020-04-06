@@ -93,21 +93,29 @@
           width: 100px;
           height: 100px;
         }
-        .icon-play3{
+        // .icon-play3{
+        //   position: absolute;
+        //   top: 8px;
+        //   left: -12px;
+        //   font-style: normal;
+        //   color: white;
+        // }
+        .fas.fa-caret-left{
           position: absolute;
           top: 8px;
-          left: -12px;
+          left: -10px;
           font-style: normal;
           color: white;
+          font-size: 30px;
         }
       }
     }
   }
 }
 
-.icon-play3:before{
-  content: '\ea1c';
-}
+// .icon-play3:before{
+//   content: '\ea1c';
+// }
 
 .form-message-field{
   position: fixed;
