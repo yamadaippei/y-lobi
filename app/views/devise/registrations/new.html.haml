@@ -29,5 +29,10 @@
               = f.label :password_confirmation
             .field-input
               = f.password_field :password_confirmation, autocomplete: "off"
+          .field
+            .field-label
+              = f.label :image, class: 'user-image-icon' do
+                .image-choose-icon 写真を選ぶ
+                = f.file_field :image, class: 'hidden'
           .actions
             = f.submit "アカウント作成", class: 'btn'

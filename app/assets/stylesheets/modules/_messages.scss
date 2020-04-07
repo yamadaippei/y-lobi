@@ -53,60 +53,70 @@
     width: 100%;
     height: 73vh;
     overflow: scroll;
-    .group-icon-info{
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      background-color: black;
-      margin: 15px 0 0 30px;
-    }
+    // position: relative;
     .message{
-      background-color: white;
       border-radius: 5%;
       margin-top: 10px;
       // border-style: ridge;
-      width: 80%;
+      width: 100%;
       float: right;
-      .message-content{
+      position: relative;
+      .message-user-icon{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
         background-color: white;
-        position: relative;
-        border-radius: 30px;
-          .introduce-user-name{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        float: left;
+        border-radius: 50%;
+      }
+      .user-image-empty{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-color: white;
+        float: left;
+        border-radius: 50%;
+      }
+      .message-contents{
+        background-color: white;
+        width: 85%;
+        float: right;
+        border-radius: 20px;
+        .message-content{
+          background-color: white;
+          position: relative;
+          border-radius: 20px;
+          width: 100%;
+            .introduce-user-name{
+              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+          .upper-message__date{
+            font-size: 15px;
           }
-        .upper-message__date{
-          font-size: 15px;
-        }
-        .edit-delete-content{
-          display: flex;
-          justify-content: space-around;
-          .edit-message-info{
-            text-decoration: none;
-            color: blue;
+          .edit-delete-content{
+            display: flex;
+            justify-content: space-around;
+            .edit-message-info{
+              text-decoration: none;
+              color: blue;
+            }
+            .message-delete-Btn{
+              text-decoration: none;
+              color: red;
+            }
           }
-          .message-delete-Btn{
-            text-decoration: none;
-            color: red;
+          .lower-message__image{
+            width: 100px;
+            height: 100px;
           }
-        }
-        .lower-message__image{
-          width: 100px;
-          height: 100px;
-        }
-        // .icon-play3{
-        //   position: absolute;
-        //   top: 8px;
-        //   left: -12px;
-        //   font-style: normal;
-        //   color: white;
-        // }
-        .fas.fa-caret-left{
-          position: absolute;
-          top: 8px;
-          left: -10px;
-          font-style: normal;
-          color: white;
-          font-size: 30px;
+          .fas.fa-caret-left{
+            position: absolute;
+            top: 8px;
+            left: -10px;
+            font-style: normal;
+            color: white;
+            font-size: 30px;
+          }
         }
       }
     }

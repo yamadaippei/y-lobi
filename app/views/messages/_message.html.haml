@@ -1,28 +1,31 @@
+
 .message
-  .message-content
-    .upper-message
-      .upper-message__user-name
-        = message.user.name
-        %a.introduce-user-name さんの投稿
-      .upper-message__date
-        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    .lower-message
-      - if message.content.present?
-        %p.lower-message__content
-          投稿内容 
-          %br
-          = message.content
-      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  - if message.user.image.present? 
+    = image_tag message.user.image.url, class: "message-user-icon"
+  - else
+    .user-image-empty
+  .message-contents
+    .message-content
+      .upper-message
+        .upper-message__user-name
+          = message.user.name
+          
+          %a.introduce-user-name さんの投稿
+        .upper-message__date
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .lower-message
+        - if message.content.present?
+          %p.lower-message__content
+            投稿内容 
+            %br
+            = message.content
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
 
-    - if user_signed_in? && current_user.id == message.user_id
-      .edit-delete-content
-        = link_to "編集", edit_group_message_path(message.group.id,message.id), class: "edit-message-info"
-        = link_to "削除", group_message_path(message.group.id, message.id), method: :delete, class: "message-delete-Btn"
-    - else
-      .edit-delete-content
-        = link_to "", edit_group_message_path(message.group.id,message.id), class: "edit-message-info"
-        = link_to "", group_message_path(message.group.id, message.id), method: :delete, class: "message-delete-Btn"
+      - if user_signed_in? && current_user.id == message.user_id
+        .edit-delete-content
+          = link_to "編集", edit_group_message_path(message.group.id,message.id), class: "edit-message-info"
+          = link_to "削除", group_message_path(message.group.id, message.id), method: :delete, class: "message-delete-Btn"
 
-    %i.icon-play3
-    %i.fas.fa-caret-left
+      %i.icon-play3
+      %i.fas.fa-caret-left

@@ -6,11 +6,9 @@ class GroupsController < ApplicationController
   
   def new
     @group = Group.new
-    @group.users << current_user
   end
 
   def create
-    # binding.pry
     @group = Group.new(group_params)
     if @group.save
       redirect_to groups_path
@@ -40,7 +38,7 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, user_ids: [])
+    params.require(:group).permit(:name).merge(user_id: current_user.id)
   end
 
 end
