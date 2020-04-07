@@ -11,7 +11,11 @@
           .group__message
             = group.show_last_message
 
-        - if user_signed_in?
+        - if user_signed_in? && current_user.id == group.user_id
           .edit-delete-content
             = link_to "編集", edit_group_path(group.id), class: "edit-group-info"
             = link_to "グループの削除", group_path(group.id), method: :delete, class: "delete-group-Btn"
+        - else
+          .edit-delete-content
+            .edit-group-info ---
+            .delete-group-Btn ---

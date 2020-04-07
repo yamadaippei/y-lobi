@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # validates :name, presence: true, uniqueness: true
   
-  has_many :group_users
-  has_many :groups, through: :gruop_users, dependent: :destroy
+  has_many :groups, dependent: :destroy
   has_many :messages, dependent: :destroy
+
+  mount_uploader :image, ImageUploader
 end
