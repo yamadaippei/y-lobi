@@ -61,6 +61,14 @@
         letter-spacing: 1px;
         font-size: 14px;
         font-weight: 200;
+        .user-image-icon{
+          .image-choose-icon{
+            cursor: pointer;
+          }
+          .hidden{
+            display: none;
+          }
+        }
 
         i {
           font-size: 11px;
@@ -100,6 +108,7 @@
         color: #d65f4c;
         font-weight: 400;
       }
+
     }
 
     .field-input {
